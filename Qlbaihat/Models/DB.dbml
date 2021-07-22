@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="qlbaihat" Class="MyData" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-LQGSM6R\SQLEXPRESS;Initial Catalog=qlbaihat;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="qlbaihatConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BaiHat" Member="BaiHats">
+    <Type Name="BaiHat">
+      <Column Name="IdBH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenBaiHat" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IdNS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdBN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="DongNhac_BaiHat" Member="DongNhac" ThisKey="IdBN" OtherKey="IdDN" Type="DongNhac" IsForeignKey="true" />
+      <Association Name="NhacSy_BaiHat" Member="NhacSy" ThisKey="IdNS" OtherKey="IdNS" Type="NhacSy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DongNhac" Member="DongNhacs">
+    <Type Name="DongNhac">
+      <Column Name="IdDN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenDongNhac" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="DongNhac_BaiHat" Member="BaiHats" ThisKey="IdDN" OtherKey="IdBN" Type="BaiHat" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhacSy" Member="NhacSies">
+    <Type Name="NhacSy">
+      <Column Name="IdNS" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenNhacSy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tuoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="NhacSy_BaiHat" Member="BaiHats" ThisKey="IdNS" OtherKey="IdNS" Type="BaiHat" />
+    </Type>
+  </Table>
+</Database>

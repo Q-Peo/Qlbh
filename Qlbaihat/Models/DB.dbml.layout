@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/MyData" />
+  <nestedChildShapes>
+    <classShape Id="4cd7e85c-98ba-408a-84ea-5db50a477f8f" absoluteBounds="4.375, 1.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/MyData/BaiHat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aacefe36-d85d-4910-b83b-e628d1e9c5f6" absoluteBounds="4.39, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9b6b9a2-4d5d-4105-a2f3-c17320db06aa" absoluteBounds="0.875, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/MyData/DongNhac" />
+      <nestedChildShapes>
+        <elementListCompartment Id="738f64ec-1110-4190-a342-3fbf2fd12d6c" absoluteBounds="0.88999999999999968, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 1.63064697265625); (4.375 : 1.63064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyData/DongNhac/DongNhac_BaiHat" />
+      <nodes>
+        <classShapeMoniker Id="d9b6b9a2-4d5d-4105-a2f3-c17320db06aa" />
+        <classShapeMoniker Id="4cd7e85c-98ba-408a-84ea-5db50a477f8f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="dad1c2f9-774f-42fb-a58b-3ab73a9b31e5" absoluteBounds="1.125, 2.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/MyData/NhacSy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="510b356e-c7ad-43b5-9f77-24194b6b5cf9" absoluteBounds="1.1400000000000001, 2.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 2.69794840494792); (4.375 : 2.69794840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyData/NhacSy/NhacSy_BaiHat" />
+      <nodes>
+        <classShapeMoniker Id="dad1c2f9-774f-42fb-a58b-3ab73a9b31e5" />
+        <classShapeMoniker Id="4cd7e85c-98ba-408a-84ea-5db50a477f8f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

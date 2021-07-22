@@ -1,0 +1,13 @@
+﻿
+#slide {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+    margin: auto;
+}
+
+#slide > img {
+    width: 100%;
+    height: 400px;
+
+}

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Qlbaihat.Models.QlNhacSy>
+
+@{
+    ViewBag.Title = "Nhacsy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách nhạc sỹ</h2>
+
+<p>
+    @Html.ActionLink("Thêm ", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdNS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenNhacSy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tuoi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GioiTinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QueQuan)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdNS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenNhacSy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tuoi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GioiTinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QueQuan)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
